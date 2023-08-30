@@ -5,13 +5,16 @@ import { Pin, WhatsApp } from '../icons/icons'
 
 const Header = () => {
   return (
-    <div className='flex items-center justify-between relative m-auto max-w-7xl px-14 pb-10 pt-16'>
+    <div className='flex items-center justify-between relative m-auto max-w-7xl px-6 pb-6 pt-16'>
       <div className='flex gap-x-8 items-center'>
-        <a href='#'>
+        <a
+          href='#Home'
+          className='scroll'
+        >
           <img
             src='./images/logo.svg'
             alt='Logo Fraternite'
-            className='-mt-9'
+            className='-mt-9 hover:opacity-80 transition-all w-40'
           />
         </a>
         <img
@@ -19,13 +22,13 @@ const Header = () => {
           alt='Logo Fraternite'
         />
       </div>
-      <div>
+      <div className='hidden lg:inline-block'>
         <nav>
           <ul className='flex gap-x-12 items-center font-bold text-secondary'>
             {menu.map((item, index) => (
               <li key={index}>
                 <a
-                  href={`#${item.name.toLocaleLowerCase}`}
+                  href={`#${item.name}`}
                   className='scroll'
                 >
                   {item.name}
@@ -35,12 +38,12 @@ const Header = () => {
           </ul>
         </nav>
       </div>
-      <div className='flex gap-x-4 items-center'>
+      <div className='gap-x-4 items-center hidden lg:flex'>
         <Social />
         <Search />
       </div>
 
-      <div className='absolute right-14 top-12 flex gap-x-4 items-center  text-primary'>
+      <div className='absolute right-8 top-12 gap-x-4 items-center text-primary hidden lg:flex'>
         <div className='flex gap-x-1 items-center'>
           <Pin />
           <span className='text-secondary text-sm'>Av. Esteco N° 155 </span>

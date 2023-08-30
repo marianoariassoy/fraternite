@@ -8,6 +8,7 @@ const Social = () => {
           href='https://www.facebook.com/profile.php?id=100094055403422'
           target='_blank'
           rel='noreferrer'
+          className='hover:text-black'
         >
           <Facebook />
         </a>
@@ -17,6 +18,7 @@ const Social = () => {
           href='https://www.instagram.com/fraternite.23/'
           target='_blank'
           rel='noreferrer'
+          className='hover:text-black'
         >
           <Instagram />
         </a>
@@ -27,6 +29,7 @@ const Social = () => {
           href='https://www.linkedin.com/in/luis-j-chiliguay-0438201b4'
           target='_blank'
           rel='noreferrer'
+          className='hover:text-black'
         >
           <Linkedin />
         </a>

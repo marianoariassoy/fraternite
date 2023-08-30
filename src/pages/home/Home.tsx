@@ -5,9 +5,12 @@ const Home = () => {
   const { data, loading } = useFetch(`/home`)
 
   return (
-    <section id='home'>
-      <div className='m-auto max-w-7xl bg-primary p-14 text-white shadow-main flex gap-x-8'>
-        <div className='w-1/2'>
+    <section
+      className='bg-primary shadow-main mt-48'
+      id='Home'
+    >
+      <div className='m-auto max-w-7xl px-6 py-14 text-white gap-x-12 lg:flex'>
+        <div className='lg:w-1/2'>
           <h1 className='font-extrabold mb-4'>NUESTRO NOMBRE</h1>
           <p className='mb-4 font-bold'>El término Fraternidad es definido como el afecto o vínculo entre hermanos. </p>
           <p className='text-wrap text-sm'>
@@ -32,7 +35,7 @@ const Home = () => {
             <strong>NUESTRA VISION: </strong> es estar entre los mejores Centros Privados de Mediación de la Región.
           </p>
         </div>
-        <div className='w-1/2'>{!loading && <Slider data={data} />}</div>
+        <div className='lg:w-1/2 mt-8 lg:m-0'>{!loading && <Slider data={data} />}</div>
       </div>
     </section>
   )

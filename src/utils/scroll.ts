@@ -1,19 +1,17 @@
-const scroll = () => {
-  const menuLinks = document.querySelectorAll(".menu-link");
+export const scroll = () => {
+  const menuLinks = document.querySelectorAll('.scroll')
 
-  menuLinks.forEach((link) => {
-    link.addEventListener("click", smoothScroll);
-  });
+  menuLinks.forEach(link => {
+    link.addEventListener('click', smoothScroll)
+  })
 
   function smoothScroll(e) {
-    e.preventDefault();
-    const targetId = this.getAttribute("href");
-    const targetElement = document.querySelector(targetId);
+    e.preventDefault()
+    const targetId = this.getAttribute('href')
+    const targetElement = document.querySelector(targetId)
     window.scrollTo({
       top: targetElement.offsetTop - 180,
-      behavior: "smooth",
-    });
+      behavior: 'smooth'
+    })
   }
-};
-
-export default scroll;
+}

@@ -9,7 +9,7 @@ type Props = {
 const Layout = ({ children }: Props) => {
   return (
     <>
-      <header className=' '>
+      <header className='fixed w-full bg-white/70 backdrop-blur-sm z-50'>
         <Header />
       </header>
       <main>
