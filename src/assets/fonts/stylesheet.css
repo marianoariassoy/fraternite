@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'Hauora Bold';
+  src: url('Hauora-Bold.woff2') format('woff2'), url('Hauora-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hauora ExtraBold';
+  src: url('Hauora-ExtraBold.woff2') format('woff2'), url('Hauora-ExtraBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hauora Medium';
+  src: url('Hauora-Medium.woff2') format('woff2'), url('Hauora-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hauora';
+  src: url('Hauora-Regular.woff2') format('woff2'), url('Hauora-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
