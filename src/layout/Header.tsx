@@ -1,24 +1,34 @@
 import { menu } from '../data/data.ts'
 import Search from './Search.tsx'
 import Social from './Social.tsx'
-import { Pin, WhatsApp } from '../icons/icons'
+import Location from './Location.tsx'
+import { Link, useRoute } from 'wouter'
 
 const Header = () => {
+  const [isActivePost] = useRoute('/post/:id')
+
+  const OpenMenu = () => {
+    document.querySelector('.nav-menu')?.classList.toggle('active')
+    document.querySelector('.menu-mobile')?.classList.toggle('hidden')
+  }
+
   return (
     <div className='flex items-center justify-between relative m-auto max-w-7xl px-6 pb-6 pt-16'>
-      <div className='flex gap-x-8 items-center'>
-        <a
-          href='#Home'
-          className='scroll'
-        >
-          <img
-            src='./images/logo.svg'
-            alt='Logo Fraternite'
-            className='-mt-9 hover:opacity-80 transition-all w-40'
-          />
-        </a>
+      <div className='flex gap-x-8 items-center justify-between w-full lg:w-auto'>
+        <Link href='/'>
+          <a
+            target='#Home'
+            className={`${isActivePost ? '' : 'scroll'}`}
+          >
+            <img
+              src='/images/logo.svg'
+              alt='Logo Fraternite'
+              className='-mt-4 lg:-mt-9 hover:opacity-80 transition-all w-36 lg:w-40'
+            />
+          </a>
+        </Link>
         <img
-          src='./images/secretaria.svg'
+          src='/images/secretaria.svg'
           alt='Logo Fraternite'
         />
       </div>
@@ -27,31 +37,34 @@ const Header = () => {
           <ul className='flex gap-x-12 items-center font-bold text-secondary'>
             {menu.map((item, index) => (
               <li key={index}>
-                <a
-                  href={`#${item.name}`}
-                  className='scroll'
-                >
-                  {item.name}
-                </a>
+                <Link href={`/${item.name}`}>
+                  <a
+                    target={`#${item.name}`}
+                    className={`${item.name === 'Contacto' ? 'scroll' : isActivePost ? '' : 'scroll'}`}
+                  >
+                    {item.name}
+                  </a>
+                </Link>
               </li>
             ))}
           </ul>
         </nav>
       </div>
-      <div className='gap-x-4 items-center hidden lg:flex'>
+      <div className='gap-x-4 items-center hidden lg:flex text-primary'>
         <Social />
         <Search />
       </div>
+      <div className='absolute right-8 top-12 hidden lg:flex'>
+        <Location />
+      </div>
 
-      <div className='absolute right-8 top-12 gap-x-4 items-center text-primary hidden lg:flex'>
-        <div className='flex gap-x-1 items-center'>
-          <Pin />
-          <span className='text-secondary text-sm'>Av. Esteco N° 155 </span>
-        </div>
-        <div className='flex gap-x-1 items-center'>
-          <WhatsApp />
-          <span className='text-secondary text-sm'>+54 9 3876 83-8814</span>
-        </div>
+      <div
+        className='nav-menu text-secondary'
+        onClick={OpenMenu}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </div>
   )

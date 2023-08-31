@@ -1,5 +1,5 @@
 import { menu } from '../data/data.ts'
-import { Facebook, Instagram, Linkedin } from '../icons/icons'
+import Social from './Social.tsx'
 
 const Footer = () => {
   return (
@@ -22,39 +22,9 @@ const Footer = () => {
             ))}
           </ul>
         </nav>
-        <ul className='flex gap-x-3 items-center'>
-          <li>
-            <a
-              href='https://www.facebook.com/profile.php?id=100094055403422'
-              target='_blank'
-              rel='noreferrer'
-              className='hover:text-black'
-            >
-              <Facebook />
-            </a>
-          </li>
-          <li>
-            <a
-              href='https://www.instagram.com/fraternite.23/'
-              target='_blank'
-              rel='noreferrer'
-              className='hover:text-black'
-            >
-              <Instagram />
-            </a>
-          </li>
-
-          <li>
-            <a
-              href='https://www.linkedin.com/in/luis-j-chiliguay-0438201b4'
-              target='_blank'
-              rel='noreferrer'
-              className='hover:text-black'
-            >
-              <Linkedin />
-            </a>
-          </li>
-        </ul>
+        <div>
+          <Social />
+        </div>
       </div>
       <div className='px-6 py-4 text-sm text-center'>
         2023 © Fraternité. Centro privado de mediación Registro D.G.M. N° 369. Todos los derechos reservados

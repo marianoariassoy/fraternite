@@ -6,11 +6,25 @@ import Valores from './Valores'
 import Servicios from './Servicios'
 import Novedades from './Novedades'
 import { scroll } from '../../utils/scroll'
+import { useLocation } from 'wouter'
 
 const Index = () => {
   useEffect(() => {
     scroll()
   }, [])
+
+  const [location] = useLocation()
+
+  useEffect(() => {
+    if (location === '/') return
+    console.log(location)
+    const target = location.replace('/', '#') as string
+    const targetElement = document.querySelector(`${target}`) as HTMLElement
+    window.scrollTo({
+      top: targetElement.offsetTop,
+      behavior: 'smooth'
+    })
+  }, [location])
 
   return (
     <Layout>

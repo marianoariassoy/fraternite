@@ -2,7 +2,7 @@ import { Facebook, Instagram, Linkedin } from '../icons/icons'
 
 const Social = () => {
   return (
-    <ul className='flex gap-x-3 items-center text-primary'>
+    <ul className='flex gap-x-3 items-center'>
       <li>
         <a
           href='https://www.facebook.com/profile.php?id=100094055403422'

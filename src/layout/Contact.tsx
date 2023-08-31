@@ -10,7 +10,7 @@ const Contact = () => {
         <h1 className='font-extrabold mb-8 text-primary'>CONTACTO</h1>
         <div className='m-auto max-w-xl flex flex-col gap-y-8 items-center justify-center'>
           <img
-            src='./images/logo-white.svg'
+            src='/images/logo-white.svg'
             alt='Logo Fraternite Blanco'
             className='w-32 lg:w-40'
           />

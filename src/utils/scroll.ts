@@ -7,7 +7,7 @@ export const scroll = () => {
 
   function smoothScroll(e) {
     e.preventDefault()
-    const targetId = this.getAttribute('href')
+    const targetId = this.getAttribute('target')
     const targetElement = document.querySelector(targetId)
     window.scrollTo({
       top: targetElement.offsetTop - 180,
