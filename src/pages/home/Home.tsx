@@ -35,7 +35,7 @@ const Home = () => {
             <strong>NUESTRA VISION: </strong> es estar entre los mejores Centros Privados de Mediación de la Región.
           </p>
         </div>
-        <div className='lg:w-1/2 mt-8 lg:m-0'>{!loading && <Slider data={data} />}</div>
+        <div className='lg:w-1/2 mt-8 lg:m-0 bg-white'>{!loading && <Slider data={data} />}</div>
       </div>
     </section>
   )

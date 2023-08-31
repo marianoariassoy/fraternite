@@ -17,13 +17,16 @@ const Index = () => {
 
   useEffect(() => {
     if (location === '/') return
-    console.log(location)
+
     const target = location.replace('/', '#') as string
     const targetElement = document.querySelector(`${target}`) as HTMLElement
-    window.scrollTo({
-      top: targetElement.offsetTop,
-      behavior: 'smooth'
-    })
+
+    if (targetElement) {
+      window.scrollTo({
+        top: targetElement.offsetTop,
+        behavior: 'smooth'
+      })
+    }
   }, [location])
 
   return (
@@ -33,7 +36,7 @@ const Index = () => {
       <Servicios />
       <Novedades />
       <Helmet>
-        <title>Fraternite</title>
+        <title>Fraternité Centro Privado de Mediación</title>
       </Helmet>
     </Layout>
   )

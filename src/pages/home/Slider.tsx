@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Slide } from 'react-slideshow-image'
 import 'react-slideshow-image/dist/styles.css'
-import Loader from '../../layout/Loader'
+import Loader from '../../components/Loader'
 
 type SliderItemProps = {
   src: string

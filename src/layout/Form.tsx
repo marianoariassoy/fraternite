@@ -7,7 +7,6 @@ const Form = () => {
   const [sended, setSended] = useState(false)
   const [sending, setSending] = useState(false)
   const [error, setError] = useState(false)
-  1
 
   const {
     register,
@@ -18,14 +17,14 @@ const Form = () => {
   const onSubmit = data => {
     setSending(true)
     const sender = {
-      to: 'saltaokmail@gmail.co',
-      from: 'no-reply@saltaok.com',
+      to: ' ',
+      from: 'no-reply@mediacionfraternite.com.ar',
       from_name: 'Fraternite',
       subject: 'Contacto'
     }
 
     axios
-      .post('http://saltaok.com/backend/send-email.php', { ...data, ...sender })
+      .post('http://mediacionfraternite.com.ar/backend/send-email.php', { ...data, ...sender })
       .then(data => {
         if (data.data === 'success') {
           setSended(true)
