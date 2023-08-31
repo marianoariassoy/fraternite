@@ -27,11 +27,18 @@ const Index = () => {
     scroll()
   })
 
-  const [match, params] = useRoute('/post/:id')
-  const { id } = params
+  const [match, params] = useRoute<{ id: string }>('/post/:id')
   const { data: dataServicios, loading: loadingServicios } = useFetch(`/servicios`)
+  const { id } = params
+
   const { data, loading } = useFetch(`/post/${id}`)
   const shareUrl = `http://mediacionfraternite.com.ar/post/${id}`
+
+  if (!match) {
+    return <p>User not found</p>
+  }
+
+  console.log(match)
 
   return (
     <Layout>
