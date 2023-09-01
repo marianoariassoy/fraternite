@@ -48,8 +48,8 @@ const Index = () => {
         </div>
       ) : (
         <>
-          <section className='shadow-main mt-48 mb-24 pb-8 lg:pb-0'>
-            <div className='m-auto max-w-7xl px-6 gap-20 lg:flex'>
+          <section className='shadow-main mt-44 mb-24 pb-8 lg:pb-0'>
+            <div className='m-auto max-w-6xl px-6 gap-20 lg:flex'>
               <div className='py-8 pb-20 lg:w-2/3'>
                 <div className='flex items-center justify-between mb-4'>
                   <h1 className='font-extrabold mb-4 text-secondary'>

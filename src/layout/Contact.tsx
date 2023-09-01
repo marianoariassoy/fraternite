@@ -7,7 +7,7 @@ const Contact = () => {
       className='bg-gray-200 bg-cover bg-center'
       id='Contacto'
     >
-      <div className='m-auto max-w-7xl px-6 py-12'>
+      <div className='m-auto max-w-6xl px-6 py-12'>
         <h1 className='font-extrabold mb-8 text-primary'>CONTACTO</h1>
         <div className='m-auto max-w-xl flex flex-col gap-y-8 items-center justify-center'>
           <img

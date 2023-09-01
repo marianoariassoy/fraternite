@@ -9,7 +9,7 @@ const Novedades = () => {
       className='text-white bg-secondary'
       id='Novedades'
     >
-      <div className='m-auto max-w-7xl px-6 py-12'>
+      <div className='m-auto max-w-6xl px-6 py-12'>
         <h1 className='font-extrabold mb-8'>NOVEDADES</h1>
         <section className='grid lg:grid-cols-4 gap-8 items-start'>
           {data &&

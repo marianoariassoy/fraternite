@@ -3,7 +3,7 @@ import { servicios } from '../../data/data'
 const Valores = () => {
   return (
     <section id='Valores'>
-      <div className='m-auto max-w-7xl px-6 py-12'>
+      <div className='m-auto max-w-6xl px-6 py-12'>
         <h1 className='font-extrabold mb-8 text-primary'>VALORES</h1>
 
         <section className='grid grid-cols-3 md:grid-cols-5 xl:grid-cols-5 gap-4  items-start text-center'>
@@ -16,7 +16,7 @@ const Valores = () => {
                 <img
                   src={`./images/${item.image} `}
                   alt={item.name}
-                  className='w-14 lg:w-20'
+                  className='w-14 lg:w-16'
                 />
               </div>
               <div className={`${index % 2 === 0 ? 'text-secondary' : 'text-primary'}  text-sm font-bold`}>

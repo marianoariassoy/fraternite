@@ -13,7 +13,7 @@ const Header = () => {
   }
 
   return (
-    <div className='flex items-center justify-between relative m-auto max-w-7xl px-6 pb-6 pt-16'>
+    <div className='flex items-center justify-between relative m-auto max-w-6xl px-6 pb-6 pt-16'>
       <div className='flex gap-x-8 items-center justify-between w-full lg:w-auto'>
         <Link href='/'>
           <a
@@ -23,7 +23,7 @@ const Header = () => {
             <img
               src='/images/logo.svg'
               alt='Logo Fraternite'
-              className='-mt-4 lg:-mt-9 hover:opacity-80 transition-all w-36 lg:w-40'
+              className='-mt-4 lg:-mt-8 hover:opacity-80 transition-all w-32 lg:w-36'
             />
           </a>
         </Link>
@@ -34,7 +34,7 @@ const Header = () => {
       </div>
       <div className='hidden lg:inline-block'>
         <nav>
-          <ul className='flex gap-x-12 items-center font-bold text-secondary'>
+          <ul className='flex gap-x-10 items-center font-bold text-secondary'>
             {menu.map((item, index) => (
               <li key={index}>
                 <Link href={`/${item.name}`}>

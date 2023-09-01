@@ -1,7 +1,10 @@
 import { menu } from '../data/data.ts'
 import Social from './Social.tsx'
+import { Link, useRoute } from 'wouter'
 
 const Footer = () => {
+  const [isActivePost] = useRoute('/post/:id')
+
   return (
     <>
       <div className='px-6 py-12 text-white w-full bg-primary flex justify-center flex-col items-center gap-y-4 shadow-main'>
@@ -10,12 +13,16 @@ const Footer = () => {
             {menu.map((item, index) => (
               <>
                 <li key={index}>
-                  <a
-                    href={`#${item.name}`}
-                    className='scroll hover:text-black'
-                  >
-                    {item.name}
-                  </a>
+                  <Link href={`/${item.name}`}>
+                    <a
+                      target={`#${item.name}`}
+                      className={`${
+                        item.name === 'Contacto' ? 'scroll' : isActivePost ? '' : 'scroll'
+                      } hover:text-black`}
+                    >
+                      {item.name}
+                    </a>
+                  </Link>
                 </li>
                 <li>|</li>
               </>

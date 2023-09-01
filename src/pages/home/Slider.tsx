@@ -19,7 +19,7 @@ const SliderItem = ({ src }: SliderItemProps) => {
   }, [src])
 
   return (
-    <div className='aspect-[4/5] lg:aspect-[5/4]'>
+    <div className='aspect-[4/5] lg:aspect-[5/4] bg-white'>
       {isLoading ? (
         <Loader />
       ) : (
