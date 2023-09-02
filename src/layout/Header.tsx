@@ -6,7 +6,6 @@ import { Link, useRoute } from 'wouter'
 
 const Header = () => {
   const [isActivePost] = useRoute('/post/:id')
-
   const OpenMenu = () => {
     document.querySelector('.nav-menu')?.classList.toggle('active')
     document.querySelector('.menu-mobile')?.classList.toggle('hidden')

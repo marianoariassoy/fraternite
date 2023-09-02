@@ -36,7 +36,7 @@ const Footer = () => {
       <div className='px-6 py-4 text-sm text-center'>
         2023 © Fraternité. Centro privado de mediación Registro D.G.M. N° 369. Todos los derechos reservados
         <a
-          href='#'
+          href='http://mcdisenio.com.ar/'
           target='_blank'
           className='block'
         >
